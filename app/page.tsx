@@ -1,18 +1,13 @@
-import './globals.css';
-import Navbar from '@/components/Navbar';
-import React, { ReactNode } from 'react';
+import React from "react";
+import Navbar from "@/components/Navbar";
 
-interface PageProps {
-  children: ReactNode;
-}
-
-const Page: React.FC<PageProps> = ({ children }) => {
+const Page = () => {
   return (
     <div>
-      <>
       <Navbar />
-      {children}
-      </>
+      <main className="p-4 max-w-6xl mx-auto">
+        <h1 className="text-3xl font-bold text-center">Вітаю. Це мій мем застосунок</h1>
+      </main>
     </div>
   );
 };
