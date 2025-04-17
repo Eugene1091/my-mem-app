@@ -1,13 +1,20 @@
-import "./globals.css";
-import Navbar from "@/components/Navbar";
+import './globals.css';
+import Navbar from '@/components/Navbar';
+import React, { ReactNode } from 'react';
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <body>
-        <Navbar />
-        <main className="p-4 max-w-6xl mx-auto">{children}</main>
-      </body>
-    </html>
-  );
+interface PageProps {
+  children: ReactNode;
 }
+
+const Page: React.FC<PageProps> = ({ children }) => {
+  return (
+    <div>
+      <>
+      <Navbar />
+      {children}
+      </>
+    </div>
+  );
+};
+
+export default Page;
